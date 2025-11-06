@@ -1,0 +1,189 @@
+/* ================================
+   Global Styles
+==================================*/
+:root {
+  --bg:#ffffff;
+  --fg:#111827;
+  --muted:#6b7280;
+  --accent:#1d4ed8;
+  --card:#f9fafb;
+  --border:#e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+}
+
+/* ================================
+   Layout with Sidebar
+==================================*/
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  flex: 0 0 280px;
+  padding: 24px;
+  border-right: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+  background: #fff;
+}
+
+.sidebar h3 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--fg);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav a:hover {
+  background: #f3f4f6;
+}
+
+.nav a.active {
+  background: #e0e7ff;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.main {
+  flex: 1;
+  padding: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* ================================
+   Header & Logos
+==================================*/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 25px;
+}
+
+.logo {
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ================================
+   Cards
+==================================*/
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 16px 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+
+h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin: .5rem 0;
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0 0 .25rem;
+}
+
+/* ================================
+   Download Button
+==================================*/
+.download-btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #163eb3;
+}
+
+/* ================================
+   Footer
+==================================*/
+footer {
+  color: var(--muted);
+  font-size: .875rem;
+  margin-top: 28px;
+  text-align: center;
+}
+
+/* ================================
+   Responsive
+==================================*/
+@media (max-width: 900px) {
+  .layout {
+    display: block;
+  }
+
+  .sidebar {
+    position: relative;
+    height: auto;
+    width: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logos {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .logo {
+    height: 100px;
+  }
+}
