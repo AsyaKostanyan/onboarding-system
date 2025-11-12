@@ -161,8 +161,8 @@ h2 {
 }
 
 .audio-card .audio-icon {
-  width: 32px;
-  height: 32px;
+  width: 12px;
+  height: 12px;
   flex: 0 0 32px;
   opacity: 0.85;
 }
